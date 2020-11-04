@@ -1,2 +1,4 @@
 *.DS_STORE
 Flicker8k_Dataset
+models
+features.pkl
