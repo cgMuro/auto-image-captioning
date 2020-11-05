@@ -28,6 +28,16 @@ def get_caption(img):
 # Set title
 st.title('Auto Image Captioning')
 
+# Add sidebar with explanation
+st.sidebar.header('What is this and how does it work?')
+st.sidebar.write('''
+This is an application that uses a neural network to auto caption images.                            
+You can upload an image and by clicking the button below it get a caption from the model.                           
+*Please note* that since the dataset I used to train the model was relatively small (due to the lack of computationally resources), sometimes it can be quite wrong.        
+
+If you want to know more about this project and the code behind it check it out on [GitHub](https://github.com/cgMuro/auto-image-captioning)
+''')
+
 # Get image
 input_image = st.file_uploader("Upload an image to caption", type=["png", "jpg", "jpeg"])
 
