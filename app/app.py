@@ -13,9 +13,11 @@ from predict import extract_features, generate_description
 # Call all the necessary function needed to generate the caption
 def get_caption(img):
     # Extract features
-    img = extract_features(img)
+    with st.spinner('Extracting features from image...'):
+        img = extract_features(img)
     # Get description
-    description = generate_description(model, tokenizer, img, maxlength)
+    with st.spinner('Generating description...'):
+        description = generate_description(model, tokenizer, img, maxlength)
     # Remove start and end sequences
     description = ' '.join(description.split()[1:-1])
 
@@ -34,10 +36,12 @@ if input_image:
     input_image = Image.open(input_image)
     st.image(input_image, use_column_width=True)
 
-    # Get description of the image
-    input_image_resized = input_image.resize((224, 224))    # Resize image
-    description = get_caption(input_image_resized)
+    if st.button('Get Caption!'):
+        # Get description of the image
+        input_image_resized = input_image.resize((224, 224))    # Resize image
+        description = get_caption(input_image_resized)
 
-    # Write caption
-    st.write('The computer given description is...')
-    st.write(f'**{description}**')
+        # Write caption
+        st.write(f'**{description}**')
+        # Draw celebratory balloons
+        st.balloons()
