@@ -1,10 +1,5 @@
-import os
-import time
-import base64
 import streamlit as st
-import numpy as np
 from PIL import Image
-import io
 # Import functions to make the prediction
 from predict import model, tokenizer, maxlength
 from predict import extract_features, generate_description

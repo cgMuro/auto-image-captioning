@@ -2,7 +2,6 @@ import pickle
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.applications.vgg16 import VGG16
-from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.models import Model
