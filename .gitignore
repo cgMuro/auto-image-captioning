@@ -1,5 +1,5 @@
 *.DS_STORE
 Flicker8k_Dataset
 models
-features.pkl
-to_colab
+saved_data
+example.jpg
