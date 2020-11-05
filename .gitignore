@@ -1,6 +1,14 @@
+# General files
 *.DS_STORE
 *__pycache__
+
+# Datasets, models, and other huge data
 Flicker8k_Dataset
+Flicker8k_Text
 models
 saved_data
 example.jpg
+
+# App data
+app/model.h5
+app/tokenizer.pkl

@@ -10,10 +10,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 # Load model
-model = tf.keras.models.load_model('./models/model_colab_21.h5')
+model = tf.keras.models.load_model('./app/model.h5')
 
 # Load tokenizer
-tokenizer = pickle.load(open('./saved_data/tokenizer.pkl', 'rb'))
+tokenizer = pickle.load(open('./app/tokenizer.pkl', 'rb'))
 
 # Define maxlength
 maxlength = 37
@@ -21,8 +21,6 @@ maxlength = 37
 
 # Process image function
 def extract_features(img):
-    print('Extracting features...')
-    
     # Load model
     model = VGG16()
     # Re-structure the model (we remove the last layer from the model because we don't need to classify the photos)
@@ -36,7 +34,6 @@ def extract_features(img):
     # Extract features
     features = model.predict(image, verbose=0)
 
-    print('Done')
     return features
 
 
