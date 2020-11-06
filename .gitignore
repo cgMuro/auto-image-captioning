@@ -12,3 +12,4 @@ example.jpg
 # App data
 app/model.h5
 app/tokenizer.pkl
+app/VGG16.h5

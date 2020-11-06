@@ -30,7 +30,7 @@ This is an application that uses a neural network to auto caption images.
 You can upload an image and by clicking the button below it get a caption from the model.                           
 *Please note* that since the dataset I used to train the model was relatively small (due to the lack of computationally resources), sometimes it can be quite wrong.        
 
-If you want to know more about this project and the code behind it check it out on [GitHub](https://github.com/cgMuro/auto-image-captioning)
+If you want to know more about this project and the code behind it check it out on [GitHub](https://github.com/cgMuro/auto-image-captioning).
 ''')
 
 # Get image

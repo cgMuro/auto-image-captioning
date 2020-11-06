@@ -9,10 +9,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 # Load model
-model = tf.keras.models.load_model('./app/model.h5')
+model = tf.keras.models.load_model('model.h5')
 
 # Load tokenizer
-tokenizer = pickle.load(open('./app/tokenizer.pkl', 'rb'))
+tokenizer = pickle.load(open('tokenizer.pkl', 'rb'))
 
 # Define maxlength
 maxlength = 37
@@ -21,9 +21,7 @@ maxlength = 37
 # Process image function
 def extract_features(img):
     # Load model
-    model = VGG16()
-    # Re-structure the model (we remove the last layer from the model because we don't need to classify the photos)
-    model = Model(inputs=model.inputs, outputs=model.layers[-2].output)
+    model = tf.keras.models.load_model('VGG16.h5')
     # Convert the image pixels to a numpy array
     image = img_to_array(img)
     # Reshape image for the model
