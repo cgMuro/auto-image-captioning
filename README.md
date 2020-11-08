@@ -1,12 +1,12 @@
 # Auto Image Captioning
 
 ## Project Overview
-* I used a CNN neural network to analyze photos and extract the features and a LSTM neural network to generate, given a photo, a caption automatically
-* To extract the features from the photos I used a pre-trained model from keras called VGG16
+* I used a CNN to analyze photos and extract the features and an LSTM neural network to generate, given a photo, a caption automatically
+* To extract the features from the photos I used a pre-trained model from Keras called VGG16
 * The LSTM neural network was used along with GloVe embeddings
-* Finally I used Streamlit to develop and then deploy with docker on heroku an [application](https://app-image-captioning.herokuapp.com/) that can be used to generate captions from new images
+* Finally I used Streamlit to develop and then deploy with docker on Heroku an [application](https://app-image-captioning.herokuapp.com/) that can be used to generate captions from new images
 
-**NOTE**: the large files such as the datasets, the glove file, the models were removed because of their size, since they are too big for github.
+**NOTE**: the large files such as the datasets, the glove file, the models were removed because of their size since they are too big for GitHub.
 
 ## Data
 From this [repository](https://github.com/jbrownlee/Datasets) I downloaded the datasets from both training and testing:
@@ -60,7 +60,7 @@ None
 ```
 Due to the lack of computationally resources I used [Google Colab](https://colab.research.google.com/) to train the model for 30 epochs using progressive overloading.
 
-Finally I evaluated and tested the model using the [BLEU score](https://en.wikipedia.org/wiki/BLEU).
+Finally, I evaluated and tested the model using the [BLEU score](https://en.wikipedia.org/wiki/BLEU).
 
 
 ## Predictions
@@ -72,7 +72,7 @@ Finally I built some logic with OpenCV to open the image on a new window, with t
 
 ## Deployment
 I created a minimal app with the help of [Streamlit](https://www.streamlit.io/), in which the user can upload an image and get the caption from the model I trained.          
-This application was then build with docker and deployed on heroku.            
+This application was then built with docker and deployed on Heroku.            
 You can find it [here](https://app-image-captioning.herokuapp.com/).
 
 
